@@ -9,4 +9,3 @@ This repo currently includes tools for:
 - exporting annotations for visualization tools like **iTOL** and **ggtree**
 
 The goal is to go from large genome phylogenies to clean, interpretable trees that are easy to visualize and explore
-# phylo-tree-infromatics
