@@ -11,10 +11,14 @@ python prune_gtdb_tree.py \
     --taxonomy bac120_taxonomy.tsv \
     --outdir results
 
-# After running, check the results:
-echo "Pipeline completed! Check the following files:"
-echo "  results/pruned_bac120.tree          - Pruned tree in Newick format"
-echo "  results/pruned_tip_metadata.tsv     - Per-tip metadata (long format)"
-echo "  results/retained_genomes.tsv        - Genome to phylum mapping"
-echo "  results/target_phyla.txt            - List of target phyla"
-echo "  results/pruning_report.txt          - Summary statistics"
+# Creating iTOL annotation files for the pruned tree
+python generate_iTOL_annotation_files.py \
+  --tree results/phylum_representative.tree \
+  --metadata results/representative_tip_metadata.tsv \
+  --taxonomy bac120_taxonomy.tsv \
+  --represented-level phylum \
+  --label-rank phylum \
+  --strip-ranks domain,phylum \
+  --outdir results/itol_annotations
+
+
