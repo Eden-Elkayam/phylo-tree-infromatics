@@ -9,3 +9,8 @@ This repo currently includes tools for:
 - exporting annotations for visualization tools like **iTOL** and **ggtree**
 
 The goal is to go from large genome phylogenies to clean, interpretable trees that are easy to visualize and explore
+
+Files required for this repo to run:
+- bac120.tree
+- bac120_taxonomy.tsv (both are found on GTDB website (gtdb.ecogenomic.org)
+- csv file for genome count by electron source, according to C1-genomics output (A. Flamholz) 
